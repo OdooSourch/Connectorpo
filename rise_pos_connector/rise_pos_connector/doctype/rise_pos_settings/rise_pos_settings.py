@@ -70,7 +70,7 @@ def get_all_customers(licence_no,api_key):
 		try:
 			# Attempt to parse the JSON content of the response
 			data = response.json()
-			for shop in data['result']['shops']:
+			for shop in data['result']:
 				
 				rps = frappe.get_doc('Rise POS Settings')
 				rps.append('shop_code_details', {'merchant_id': shop['merchant_id'],'shop_code':shop['shop_code'], 'shop_name': shop['name'],'erp_token':shop['erp_token']})
