@@ -15,7 +15,6 @@ frappe.ui.form.on('Purchase Setting', {
 					only_special: frm.doc.only_special,
 					limit: frm.doc.limit,
 					page: frm.doc.page
-
 				},
 				callback: function(response) {
 					frm.refresh();
